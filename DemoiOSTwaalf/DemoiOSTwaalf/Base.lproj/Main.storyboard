@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +15,56 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DemoiOSTwaalf" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMo-SU-wW5" userLabel="MLButton">
+                                <rect key="frame" x="100" y="20" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NMo-SU-wW5" secondAttribute="height" multiplier="1:1" id="znM-nV-Nij"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="CoreML2"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEQ-ep-OKx" userLabel="ARButton">
+                                <rect key="frame" x="100" y="292" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gEQ-ep-OKx" secondAttribute="height" multiplier="1:1" id="eaH-gD-9gd"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="empty"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdz-9j-rp4" userLabel="XXButton">
+                                <rect key="frame" x="100" y="156" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qdz-9j-rp4" secondAttribute="height" multiplier="1:1" id="SBf-us-BBv"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="ARKit2"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qdz-9j-rp4" firstAttribute="height" secondItem="NMo-SU-wW5" secondAttribute="height" id="BnX-Qw-RO1"/>
+                            <constraint firstItem="qdz-9j-rp4" firstAttribute="centerX" secondItem="NMo-SU-wW5" secondAttribute="centerX" id="FMU-Sg-8s6"/>
+                            <constraint firstItem="qdz-9j-rp4" firstAttribute="top" secondItem="NMo-SU-wW5" secondAttribute="bottom" constant="16" id="ODL-0X-R5E"/>
+                            <constraint firstItem="gEQ-ep-OKx" firstAttribute="centerX" secondItem="qdz-9j-rp4" secondAttribute="centerX" id="c9l-aa-sem"/>
+                            <constraint firstItem="gEQ-ep-OKx" firstAttribute="height" secondItem="qdz-9j-rp4" secondAttribute="height" id="daE-aL-Ihr"/>
+                            <constraint firstItem="gEQ-ep-OKx" firstAttribute="top" secondItem="qdz-9j-rp4" secondAttribute="bottom" constant="16" id="iSc-il-lkb"/>
+                            <constraint firstItem="NMo-SU-wW5" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.25" id="kcc-Zu-HRr"/>
+                            <constraint firstItem="NMo-SU-wW5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mPz-en-bN6"/>
+                            <constraint firstItem="NMo-SU-wW5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="zoU-g1-cZf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="36" y="33.733133433283363"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ARKit2" width="255" height="258"/>
+        <image name="CoreML2" width="255" height="258"/>
+        <image name="empty" width="255" height="258"/>
+    </resources>
 </document>
