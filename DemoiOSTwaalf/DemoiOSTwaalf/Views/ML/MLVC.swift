@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MLVC.swift
 //  DemoiOSTwaalf
 //
 //  Created by Grzesiek Kulesza on 21.06.2018.
@@ -8,16 +8,12 @@
 
 import UIKit
 
-class StartViewController: UIViewController {
+class MLVC: UIViewController {
 
-    
-    @IBOutlet weak var playButton: UIButton!
-    @IBOutlet weak var yourRebuses: UIButton!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,21 +21,7 @@ class StartViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
-    @IBAction func mLAction(_ sender: UIButton) {
-        if let vcc = UIStoryboard(name: "ML", bundle: nil).instantiateInitialViewController() {
-            UIApplication.mainNC?.pushViewController(vcc, animated: false)
-        }
-    }
-    
-    @IBAction func playAction(_ sender: UIButton) {
-        if let vc = UIStoryboard(name: "Levels", bundle: nil).instantiateInitialViewController() {
-            UIApplication.mainNC?.pushViewController(vc, animated: false)
-        }
 
-    }
-    
     /*
     // MARK: - Navigation
 
@@ -52,12 +34,12 @@ class StartViewController: UIViewController {
 
 }
 
-extension StartViewController: BarsDelegate {
+extension MLVC: BarsDelegate {
     func top() -> [AnyBarView] {
         return [
             Bar<TitleBarView>() {
-                $0.name = "test"
-                $0.mainView.backgroundColor = UIColor.red
+                $0.name = "ML"
+                $0.mainView.backgroundColor = UIColor.blue
             }
         ]
     }
