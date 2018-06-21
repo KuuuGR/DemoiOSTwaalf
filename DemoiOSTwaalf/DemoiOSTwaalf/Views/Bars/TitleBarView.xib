@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="xCf-v8-sUX" customClass="TitleBarView" customModule="DemoiOSTwaalf" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WaY-Jl-wxy">
+                    <rect key="frame" x="10" y="43" width="355" height="1"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Unj-pY-nar"/>
+                    </constraints>
+                </view>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EqK-3y-15g">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFW-yP-PWJ">
+                            <rect key="frame" x="166" y="12" width="43" height="19.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" red="0.031372549019607843" green="0.031372549019607843" blue="0.031372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3FO-yB-TjN" customClass="UIButtonScaledImage" customModule="DemoiOSTwaalf" customModuleProvider="target">
+                            <rect key="frame" x="8" y="8" width="28" height="28"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="3FO-yB-TjN" secondAttribute="height" multiplier="1:1" id="Eid-Cz-kjc"/>
+                            </constraints>
+                            <state key="normal" image="ic_back"/>
+                            <connections>
+                                <action selector="backAction:" destination="xCf-v8-sUX" eventType="touchUpInside" id="uiP-j6-jNX"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="FFW-yP-PWJ" firstAttribute="centerX" secondItem="EqK-3y-15g" secondAttribute="centerX" id="BeM-5A-CbW"/>
+                        <constraint firstItem="3FO-yB-TjN" firstAttribute="top" secondItem="EqK-3y-15g" secondAttribute="top" constant="8" id="MgX-fj-3rU"/>
+                        <constraint firstItem="FFW-yP-PWJ" firstAttribute="centerY" secondItem="EqK-3y-15g" secondAttribute="centerY" id="VCY-3A-jzA"/>
+                        <constraint firstItem="3FO-yB-TjN" firstAttribute="leading" secondItem="EqK-3y-15g" secondAttribute="leading" constant="8" id="bPH-pG-HWD"/>
+                        <constraint firstAttribute="height" priority="750" constant="44" id="dfq-sp-3DC"/>
+                        <constraint firstAttribute="bottom" secondItem="3FO-yB-TjN" secondAttribute="bottom" constant="8" id="gRy-QE-8Pi"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="WaY-Jl-wxy" firstAttribute="leading" secondItem="EqK-3y-15g" secondAttribute="leading" constant="10" id="9h7-To-X3j"/>
+                <constraint firstItem="EqK-3y-15g" firstAttribute="leading" secondItem="Kkm-Ll-ZCY" secondAttribute="leading" id="B9O-H7-IGZ"/>
+                <constraint firstAttribute="bottom" secondItem="EqK-3y-15g" secondAttribute="bottom" id="Ix9-KA-qzK"/>
+                <constraint firstItem="EqK-3y-15g" firstAttribute="top" secondItem="xCf-v8-sUX" secondAttribute="top" id="VOS-6J-NWs"/>
+                <constraint firstItem="EqK-3y-15g" firstAttribute="trailing" secondItem="WaY-Jl-wxy" secondAttribute="trailing" constant="10" id="bHr-c5-26o"/>
+                <constraint firstAttribute="trailing" secondItem="EqK-3y-15g" secondAttribute="trailing" id="ges-A9-5yS"/>
+                <constraint firstItem="WaY-Jl-wxy" firstAttribute="bottom" secondItem="EqK-3y-15g" secondAttribute="bottom" id="s8L-dU-YCe"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Kkm-Ll-ZCY"/>
+            <connections>
+                <outlet property="backButton" destination="3FO-yB-TjN" id="JLU-ay-2sQ"/>
+                <outlet property="mainView" destination="EqK-3y-15g" id="eTu-Ox-rfu"/>
+                <outlet property="nameLabel" destination="FFW-yP-PWJ" id="57i-zF-Oo2"/>
+                <outlet property="shadowView" destination="WaY-Jl-wxy" id="RcZ-W4-gkz"/>
+            </connections>
+            <point key="canvasLocation" x="-28.5" y="-34"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_back" width="27" height="27"/>
+    </resources>
+</document>

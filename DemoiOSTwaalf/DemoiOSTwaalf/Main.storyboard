@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Rebusy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPp-oZ-yZK">
+                                <rect key="frame" x="0.0" y="70" width="375" height="547"/>
+                                <connections>
+                                    <segue destination="efn-Ld-l3u" kind="embed" identifier="mainNC" id="QmT-NA-T0S"/>
+                                </connections>
+                            </containerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hcy-rB-ZB5">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="250" id="8m5-DB-mIa"/>
+                                    <constraint firstAttribute="height" constant="50" placeholder="YES" id="B0o-Dv-dfH"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="npn-im-5Sc"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Iac-8l-n2n">
+                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="MbH-IN-R0r"/>
+                                    <constraint firstAttribute="height" constant="50" placeholder="YES" id="QWq-DU-mYm"/>
+                                    <constraint firstAttribute="height" priority="250" id="QX1-JO-LxT"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1U3-9D-sLE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hPp-oZ-yZK" secondAttribute="trailing" id="0ti-5P-HSu"/>
+                            <constraint firstItem="Iac-8l-n2n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2Yd-xL-HZE"/>
+                            <constraint firstItem="Iac-8l-n2n" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ddz-fd-bsT"/>
+                            <constraint firstItem="hcy-rB-ZB5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="LcJ-TB-fvf"/>
+                            <constraint firstItem="Iac-8l-n2n" firstAttribute="top" secondItem="1U3-9D-sLE" secondAttribute="bottom" id="ODK-jA-31o"/>
+                            <constraint firstItem="1U3-9D-sLE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QrW-vl-h3h"/>
+                            <constraint firstItem="hPp-oZ-yZK" firstAttribute="top" secondItem="Iac-8l-n2n" secondAttribute="bottom" id="Scm-cm-gUi"/>
+                            <constraint firstItem="hPp-oZ-yZK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XrE-Qi-8qz"/>
+                            <constraint firstItem="1U3-9D-sLE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Y5C-mC-jbc"/>
+                            <constraint firstItem="Iac-8l-n2n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aRM-tw-07C"/>
+                            <constraint firstItem="hcy-rB-ZB5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="av5-Va-2bI"/>
+                            <constraint firstItem="hcy-rB-ZB5" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="dH8-hv-U5L"/>
+                            <constraint firstItem="hcy-rB-ZB5" firstAttribute="top" secondItem="hPp-oZ-yZK" secondAttribute="bottom" id="v7E-A5-jLV"/>
+                            <constraint firstAttribute="trailing" secondItem="1U3-9D-sLE" secondAttribute="trailing" id="xo3-aP-rCp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bellowSatusBarView" destination="1U3-9D-sLE" id="Tn3-u3-x9f"/>
+                        <outlet property="bottomMargin" destination="dH8-hv-U5L" id="tGd-cP-89c"/>
+                        <outlet property="bottomStackView" destination="hcy-rB-ZB5" id="eSc-se-myh"/>
+                        <outlet property="centerView" destination="hPp-oZ-yZK" id="G9R-AK-qHq"/>
+                        <outlet property="topStackView" destination="Iac-8l-n2n" id="tRz-M5-zsC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141.59999999999999" y="133.5832083958021"/>
+        </scene>
+        <!--Main Navigation Controller-->
+        <scene sceneID="vbM-ab-WVm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="efn-Ld-l3u" customClass="MainNavigationController" customModule="Rebusy" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jwe-WD-a1q">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zxu-Lz-2QK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1113" y="34"/>
+        </scene>
+    </scenes>
+</document>
