@@ -33,8 +33,23 @@ class StartViewController: UIViewController {
         }
     }
     
+    @IBAction func aRAction(_ sender: UIButton) {
+        if let vc = UIStoryboard(name: "AR", bundle: nil).instantiateInitialViewController() {
+            UIApplication.mainNC?.pushViewController(vc, animated: false)
+        }
+    }
+    
+    @IBAction func futureAction(_ sender: UIButton) {
+        if let vc = UIStoryboard(name: "Future", bundle: nil).instantiateInitialViewController() {
+            UIApplication.mainNC?.pushViewController(vc, animated: false)
+        }
+    }
+    
 
 
+    
+    
+    
     }
 
     /*
