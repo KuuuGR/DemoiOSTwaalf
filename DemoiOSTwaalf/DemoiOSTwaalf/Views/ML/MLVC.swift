@@ -38,8 +38,9 @@ extension MLVC: BarsDelegate {
     func top() -> [AnyBarView] {
         return [
             Bar<TitleBarView>() {
-                $0.name = "ML"
-                $0.mainView.backgroundColor = UIColor.blue
+                $0.name = "Machine Learning"
+                $0.mainView.backgroundColor = UIColor.dGreen
+                $0.nameLabel.textColor = UIColor.dBlack
             }
         ]
     }

@@ -56,8 +56,9 @@ extension StartViewController: BarsDelegate {
     func top() -> [AnyBarView] {
         return [
             Bar<TitleBarView>() {
-                $0.name = "test"
-                $0.mainView.backgroundColor = UIColor.red
+                $0.name = "Wybierz grupę funkcjonalności"
+                $0.mainView.backgroundColor = UIColor.dBlack
+                $0.nameLabel.textColor = UIColor.dWhite
             }
         ]
     }
