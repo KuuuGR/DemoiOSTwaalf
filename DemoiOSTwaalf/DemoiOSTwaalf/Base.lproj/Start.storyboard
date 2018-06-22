@@ -20,7 +20,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMo-SU-wW5" userLabel="MLButton">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titleBackground" translatesAutoresizingMaskIntoConstraints="NO" id="vzZ-RW-Aqq">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMo-SU-wW5" userLabel="MLButton" customClass="BigButton" customModule="DemoiOSTwaalf" customModuleProvider="target">
                                 <rect key="frame" x="100" y="52" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="NMo-SU-wW5" secondAttribute="height" multiplier="1:1" id="znM-nV-Nij"/>
@@ -30,14 +33,14 @@
                                     <action selector="mLAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bUD-Vq-o43"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEQ-ep-OKx" userLabel="ARButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEQ-ep-OKx" userLabel="ARButton" customClass="BigButton" customModule="DemoiOSTwaalf" customModuleProvider="target">
                                 <rect key="frame" x="100" y="324" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gEQ-ep-OKx" secondAttribute="height" multiplier="1:1" id="eaH-gD-9gd"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="empty"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdz-9j-rp4" userLabel="XXButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdz-9j-rp4" userLabel="XXButton" customClass="BigButton" customModule="DemoiOSTwaalf" customModuleProvider="target">
                                 <rect key="frame" x="100" y="188" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="qdz-9j-rp4" secondAttribute="height" multiplier="1:1" id="SBf-us-BBv"/>
@@ -45,16 +48,19 @@
                                 <state key="normal" title="Button" image="ARKit2"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="vzZ-RW-Aqq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6Uv-ay-jcr"/>
                             <constraint firstItem="qdz-9j-rp4" firstAttribute="height" secondItem="NMo-SU-wW5" secondAttribute="height" id="BnX-Qw-RO1"/>
+                            <constraint firstItem="vzZ-RW-Aqq" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="DqN-L9-Omq"/>
                             <constraint firstItem="qdz-9j-rp4" firstAttribute="centerX" secondItem="NMo-SU-wW5" secondAttribute="centerX" id="FMU-Sg-8s6"/>
                             <constraint firstItem="qdz-9j-rp4" firstAttribute="top" secondItem="NMo-SU-wW5" secondAttribute="bottom" constant="16" id="ODL-0X-R5E"/>
                             <constraint firstItem="gEQ-ep-OKx" firstAttribute="centerX" secondItem="qdz-9j-rp4" secondAttribute="centerX" id="c9l-aa-sem"/>
                             <constraint firstItem="gEQ-ep-OKx" firstAttribute="height" secondItem="qdz-9j-rp4" secondAttribute="height" id="daE-aL-Ihr"/>
+                            <constraint firstItem="vzZ-RW-Aqq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gBe-iD-fkd"/>
                             <constraint firstItem="gEQ-ep-OKx" firstAttribute="top" secondItem="qdz-9j-rp4" secondAttribute="bottom" constant="16" id="iSc-il-lkb"/>
                             <constraint firstItem="NMo-SU-wW5" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.25" id="kcc-Zu-HRr"/>
                             <constraint firstItem="NMo-SU-wW5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="mPz-en-bN6"/>
+                            <constraint firstItem="vzZ-RW-Aqq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="oOM-cL-zWv"/>
                             <constraint firstItem="NMo-SU-wW5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="zoU-g1-cZf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -62,12 +68,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="36" y="33.733133433283363"/>
+            <point key="canvasLocation" x="35.625" y="32.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="ARKit2" width="255" height="258"/>
         <image name="CoreML2" width="255" height="258"/>
         <image name="empty" width="255" height="258"/>
+        <image name="titleBackground" width="407" height="723"/>
     </resources>
 </document>
