@@ -19,24 +19,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWH-dL-5Aw" userLabel="imageMiningButton" customClass="DefaultButton" customModule="DemoiOSTwaalf" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="375" height="213.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWH-dL-5Aw" userLabel="imageMiningButton" customClass="BigButton" customModule="DemoiOSTwaalf" customModuleProvider="target">
+                                <rect key="frame" x="2" y="22" width="371" height="213.5"/>
                                 <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button" image="imageMining"/>
                                 <connections>
                                     <action selector="imageMainingAction:" destination="xER-ho-NJw" eventType="touchUpInside" id="IcD-cP-MJq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AB4-mg-rEy" userLabel="textMiningButton" customClass="DefaultButton" customModule="DemoiOSTwaalf" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="233.5" width="375" height="213.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AB4-mg-rEy" userLabel="textMiningButton" customClass="BigButton" customModule="DemoiOSTwaalf" customModuleProvider="target">
+                                <rect key="frame" x="2" y="237.5" width="371" height="213.5"/>
                                 <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button" image="TextMining"/>
                                 <connections>
                                     <action selector="textMaining:" destination="xER-ho-NJw" eventType="touchUpInside" id="nqe-1L-oWt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r1T-Lu-exn" userLabel="othersButton" customClass="DefaultButton" customModule="DemoiOSTwaalf" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="447" width="375" height="213.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r1T-Lu-exn" userLabel="othersButton" customClass="BigButton" customModule="DemoiOSTwaalf" customModuleProvider="target">
+                                <rect key="frame" x="2" y="453" width="371" height="213.5"/>
                                 <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button" image="Others"/>
                                 <connections>
@@ -48,16 +48,15 @@
                         <constraints>
                             <constraint firstItem="r1T-Lu-exn" firstAttribute="leading" secondItem="AB4-mg-rEy" secondAttribute="leading" id="0eS-6f-dWn"/>
                             <constraint firstItem="AB4-mg-rEy" firstAttribute="height" secondItem="wWH-dL-5Aw" secondAttribute="height" id="2XC-Kc-hqX"/>
-                            <constraint firstItem="wWH-dL-5Aw" firstAttribute="centerX" secondItem="efJ-d6-Bzs" secondAttribute="centerX" id="3nJ-Uy-dD2"/>
-                            <constraint firstItem="wWH-dL-5Aw" firstAttribute="top" secondItem="efJ-d6-Bzs" secondAttribute="top" id="AyN-JW-oKy"/>
-                            <constraint firstItem="wWH-dL-5Aw" firstAttribute="leading" secondItem="efJ-d6-Bzs" secondAttribute="leading" id="CbA-GY-e3d"/>
+                            <constraint firstItem="wWH-dL-5Aw" firstAttribute="top" secondItem="efJ-d6-Bzs" secondAttribute="top" constant="2" id="AyN-JW-oKy"/>
+                            <constraint firstItem="wWH-dL-5Aw" firstAttribute="leading" secondItem="efJ-d6-Bzs" secondAttribute="leading" constant="2" id="CbA-GY-e3d"/>
                             <constraint firstItem="AB4-mg-rEy" firstAttribute="leading" secondItem="wWH-dL-5Aw" secondAttribute="leading" id="JTr-FY-OOf"/>
-                            <constraint firstItem="r1T-Lu-exn" firstAttribute="top" secondItem="AB4-mg-rEy" secondAttribute="bottom" id="PYs-X4-GlR"/>
-                            <constraint firstItem="AB4-mg-rEy" firstAttribute="top" secondItem="wWH-dL-5Aw" secondAttribute="bottom" id="nPS-Mx-XOK"/>
+                            <constraint firstItem="r1T-Lu-exn" firstAttribute="top" secondItem="AB4-mg-rEy" secondAttribute="bottom" constant="2" id="PYs-X4-GlR"/>
+                            <constraint firstItem="AB4-mg-rEy" firstAttribute="top" secondItem="wWH-dL-5Aw" secondAttribute="bottom" constant="2" id="nPS-Mx-XOK"/>
                             <constraint firstItem="AB4-mg-rEy" firstAttribute="width" secondItem="wWH-dL-5Aw" secondAttribute="width" id="oef-8L-Euo"/>
                             <constraint firstItem="r1T-Lu-exn" firstAttribute="height" secondItem="wWH-dL-5Aw" secondAttribute="height" id="rVi-Sv-fZk"/>
                             <constraint firstItem="wWH-dL-5Aw" firstAttribute="height" secondItem="IEm-yU-dCl" secondAttribute="height" multiplier="0.32" id="sX2-8P-fVI"/>
-                            <constraint firstItem="wWH-dL-5Aw" firstAttribute="trailing" secondItem="efJ-d6-Bzs" secondAttribute="trailing" id="wC1-O6-rJI"/>
+                            <constraint firstItem="wWH-dL-5Aw" firstAttribute="trailing" secondItem="efJ-d6-Bzs" secondAttribute="trailing" constant="-2" id="wC1-O6-rJI"/>
                             <constraint firstItem="r1T-Lu-exn" firstAttribute="width" secondItem="wWH-dL-5Aw" secondAttribute="width" id="xf2-FO-qjq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="efJ-d6-Bzs"/>

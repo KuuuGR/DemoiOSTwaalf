@@ -8,25 +8,22 @@
 
 import UIKit
 
-class DefaultButton: ShadedButton {
-    
-    // @IBInspectable var fontSize: CGFloat = 15.0
+class RoundButton: ShadedButton {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-    
+        
         //self.backgroundColor = UIColor.dGreen
-        //layer.cornerRadius = self.frame.size.height/2
+        layer.cornerRadius = self.frame.size.height/6
         setTitleColor(UIColor.dBlack, for: .normal)
-        layer.borderWidth = 1
-        layer.borderColor = UIColor.dBlack.cgColor
+        layer.borderWidth = 2
+        layer.borderColor = UIColor.dWhite.cgColor
         
         titleLabel?.font =  UIFont(name: "Roboto-Medium", size: 21.0) ?? UIFont.systemFont(ofSize: 5.0)
         // self.titleLabel?.font =  UIFont(name: "Papyrus", size: 21.0) ?? UIFont.systemFont(ofSize: 2.0)
         
     }
 }
-

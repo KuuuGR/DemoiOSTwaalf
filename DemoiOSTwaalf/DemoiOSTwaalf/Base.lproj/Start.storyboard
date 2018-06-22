@@ -23,7 +23,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titleBackground" translatesAutoresizingMaskIntoConstraints="NO" id="vzZ-RW-Aqq">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMo-SU-wW5" userLabel="MLButton" customClass="BigButton" customModule="DemoiOSTwaalf" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMo-SU-wW5" userLabel="MLButton" customClass="RoundButton" customModule="DemoiOSTwaalf" customModuleProvider="target">
                                 <rect key="frame" x="100" y="52" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="NMo-SU-wW5" secondAttribute="height" multiplier="1:1" id="znM-nV-Nij"/>
@@ -33,14 +33,14 @@
                                     <action selector="mLAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bUD-Vq-o43"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEQ-ep-OKx" userLabel="ARButton" customClass="BigButton" customModule="DemoiOSTwaalf" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEQ-ep-OKx" userLabel="ARButton" customClass="RoundButton" customModule="DemoiOSTwaalf" customModuleProvider="target">
                                 <rect key="frame" x="100" y="324" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gEQ-ep-OKx" secondAttribute="height" multiplier="1:1" id="eaH-gD-9gd"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="empty"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdz-9j-rp4" userLabel="XXButton" customClass="BigButton" customModule="DemoiOSTwaalf" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdz-9j-rp4" userLabel="XXButton" customClass="RoundButton" customModule="DemoiOSTwaalf" customModuleProvider="target">
                                 <rect key="frame" x="100" y="188" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="qdz-9j-rp4" secondAttribute="height" multiplier="1:1" id="SBf-us-BBv"/>

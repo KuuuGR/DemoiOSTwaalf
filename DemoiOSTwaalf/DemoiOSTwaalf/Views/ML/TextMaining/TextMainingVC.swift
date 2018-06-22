@@ -33,3 +33,19 @@ class TextMainingVC: UIViewController {
     */
 
 }
+
+
+
+
+
+extension TextMainingVC: BarsDelegate {
+    func top() -> [AnyBarView] {
+        return [
+            Bar<TitleBarView>() {
+                $0.name = "Text Maining"
+                $0.mainView.backgroundColor = UIColor.dBlack
+                $0.nameLabel.textColor = UIColor.dWhite
+            }
+        ]
+    }
+}

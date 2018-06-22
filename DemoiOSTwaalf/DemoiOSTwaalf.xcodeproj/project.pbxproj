@@ -35,10 +35,10 @@
 		22C3F7FA20DCFD8E00C1EB79 /* TextMaining.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C3F7F920DCFD8E00C1EB79 /* TextMaining.storyboard */; };
 		22C3F7FC20DCFDA900C1EB79 /* TextMainingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3F7FB20DCFDA900C1EB79 /* TextMainingVC.swift */; };
 		22C3F7FE20DCFDC800C1EB79 /* OthersMLVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3F7FD20DCFDC800C1EB79 /* OthersMLVC.swift */; };
-		22C3F80020DD081D00C1EB79 /* DefaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3F7FF20DD081D00C1EB79 /* DefaultButton.swift */; };
+		22C3F80020DD081D00C1EB79 /* BigButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3F7FF20DD081D00C1EB79 /* BigButton.swift */; };
 		22C3F80220DD08B100C1EB79 /* ShadedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3F80120DD08B100C1EB79 /* ShadedViews.swift */; };
 		22C3F80420DD08D200C1EB79 /* View+Shaded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3F80320DD08D200C1EB79 /* View+Shaded.swift */; };
-		22C3F80620DD0FD600C1EB79 /* BigButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3F80520DD0FD600C1EB79 /* BigButton.swift */; };
+		22C3F80620DD0FD600C1EB79 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3F80520DD0FD600C1EB79 /* RoundButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,10 +84,10 @@
 		22C3F7F920DCFD8E00C1EB79 /* TextMaining.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TextMaining.storyboard; sourceTree = "<group>"; };
 		22C3F7FB20DCFDA900C1EB79 /* TextMainingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMainingVC.swift; sourceTree = "<group>"; };
 		22C3F7FD20DCFDC800C1EB79 /* OthersMLVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OthersMLVC.swift; sourceTree = "<group>"; };
-		22C3F7FF20DD081D00C1EB79 /* DefaultButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButton.swift; sourceTree = "<group>"; };
+		22C3F7FF20DD081D00C1EB79 /* BigButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigButton.swift; sourceTree = "<group>"; };
 		22C3F80120DD08B100C1EB79 /* ShadedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadedViews.swift; sourceTree = "<group>"; };
 		22C3F80320DD08D200C1EB79 /* View+Shaded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Shaded.swift"; sourceTree = "<group>"; };
-		22C3F80520DD0FD600C1EB79 /* BigButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigButton.swift; sourceTree = "<group>"; };
+		22C3F80520DD0FD600C1EB79 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,8 +192,8 @@
 		22C3F7D020DBBA6000C1EB79 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				22C3F7FF20DD081D00C1EB79 /* DefaultButton.swift */,
-				22C3F80520DD0FD600C1EB79 /* BigButton.swift */,
+				22C3F7FF20DD081D00C1EB79 /* BigButton.swift */,
+				22C3F80520DD0FD600C1EB79 /* RoundButton.swift */,
 				22C3F80120DD08B100C1EB79 /* ShadedViews.swift */,
 				22C3F80320DD08D200C1EB79 /* View+Shaded.swift */,
 				22C3F7D620DBBBF700C1EB79 /* UIApplication+Nav.swift */,
@@ -392,7 +392,7 @@
 				22C3F7FE20DCFDC800C1EB79 /* OthersMLVC.swift in Sources */,
 				22C3F7CC20DBB94100C1EB79 /* Utils.swift in Sources */,
 				22C3F80420DD08D200C1EB79 /* View+Shaded.swift in Sources */,
-				22C3F80020DD081D00C1EB79 /* DefaultButton.swift in Sources */,
+				22C3F80020DD081D00C1EB79 /* BigButton.swift in Sources */,
 				22C3F7EB20DBD7B200C1EB79 /* StartViewController.swift in Sources */,
 				22C3F7DD20DBBCD200C1EB79 /* EmptyBarView.swift in Sources */,
 				22C3F7ED20DBDB3100C1EB79 /* MLVC.swift in Sources */,
@@ -401,7 +401,7 @@
 				22C3F7DF20DBBCFB00C1EB79 /* TitleBarView.swift in Sources */,
 				22C3F7FC20DCFDA900C1EB79 /* TextMainingVC.swift in Sources */,
 				22C3F7C920DBB8D500C1EB79 /* Bar.swift in Sources */,
-				22C3F80620DD0FD600C1EB79 /* BigButton.swift in Sources */,
+				22C3F80620DD0FD600C1EB79 /* RoundButton.swift in Sources */,
 				22C3F7D920DBBC1500C1EB79 /* UIView+Nib.swift in Sources */,
 				22C3F7A220DBA0A300C1EB79 /* AppDelegate.swift in Sources */,
 				22C3F7F620DCF6F300C1EB79 /* ImageMainingVC.swift in Sources */,

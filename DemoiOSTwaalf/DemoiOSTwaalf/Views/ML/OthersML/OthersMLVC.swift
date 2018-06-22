@@ -33,3 +33,17 @@ class OthersMLVC: UIViewController {
     */
 
 }
+
+
+
+extension OthersMLVC: BarsDelegate {
+    func top() -> [AnyBarView] {
+        return [
+            Bar<TitleBarView>() {
+                $0.name = "Others Machine Learning"
+                $0.mainView.backgroundColor = UIColor.dBlack
+                $0.nameLabel.textColor = UIColor.dWhite
+            }
+        ]
+    }
+}
