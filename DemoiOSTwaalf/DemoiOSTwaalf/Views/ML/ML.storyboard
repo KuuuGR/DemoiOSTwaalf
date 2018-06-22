@@ -28,7 +28,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AB4-mg-rEy" userLabel="textMiningButton">
-                                <rect key="frame" x="0.0" y="238.5" width="375" height="213.5"/>
+                                <rect key="frame" x="0.0" y="233.5" width="375" height="213.5"/>
                                 <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button" image="TextMining"/>
                                 <connections>
@@ -36,7 +36,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r1T-Lu-exn" userLabel="othersButton">
-                                <rect key="frame" x="0.0" y="457" width="375" height="213.5"/>
+                                <rect key="frame" x="0.0" y="447" width="375" height="213.5"/>
                                 <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button" image="Others"/>
                                 <connections>
@@ -52,8 +52,8 @@
                             <constraint firstItem="wWH-dL-5Aw" firstAttribute="top" secondItem="efJ-d6-Bzs" secondAttribute="top" id="AyN-JW-oKy"/>
                             <constraint firstItem="wWH-dL-5Aw" firstAttribute="leading" secondItem="efJ-d6-Bzs" secondAttribute="leading" id="CbA-GY-e3d"/>
                             <constraint firstItem="AB4-mg-rEy" firstAttribute="leading" secondItem="wWH-dL-5Aw" secondAttribute="leading" id="JTr-FY-OOf"/>
-                            <constraint firstItem="r1T-Lu-exn" firstAttribute="top" secondItem="AB4-mg-rEy" secondAttribute="bottom" constant="5" id="PYs-X4-GlR"/>
-                            <constraint firstItem="AB4-mg-rEy" firstAttribute="top" secondItem="wWH-dL-5Aw" secondAttribute="bottom" constant="5" id="nPS-Mx-XOK"/>
+                            <constraint firstItem="r1T-Lu-exn" firstAttribute="top" secondItem="AB4-mg-rEy" secondAttribute="bottom" id="PYs-X4-GlR"/>
+                            <constraint firstItem="AB4-mg-rEy" firstAttribute="top" secondItem="wWH-dL-5Aw" secondAttribute="bottom" id="nPS-Mx-XOK"/>
                             <constraint firstItem="AB4-mg-rEy" firstAttribute="width" secondItem="wWH-dL-5Aw" secondAttribute="width" id="oef-8L-Euo"/>
                             <constraint firstItem="r1T-Lu-exn" firstAttribute="height" secondItem="wWH-dL-5Aw" secondAttribute="height" id="rVi-Sv-fZk"/>
                             <constraint firstItem="wWH-dL-5Aw" firstAttribute="height" secondItem="IEm-yU-dCl" secondAttribute="height" multiplier="0.32" id="sX2-8P-fVI"/>
@@ -69,8 +69,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Others" width="768" height="400"/>
-        <image name="TextMining" width="768" height="400"/>
-        <image name="imageMining" width="768" height="400"/>
+        <image name="Others" width="746" height="372"/>
+        <image name="TextMining" width="744" height="372"/>
+        <image name="imageMining" width="743" height="372"/>
     </resources>
 </document>
