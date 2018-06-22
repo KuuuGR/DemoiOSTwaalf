@@ -31,6 +31,10 @@
 		22C3F7EF20DBDB5700C1EB79 /* ML.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C3F7EE20DBDB5700C1EB79 /* ML.storyboard */; };
 		22C3F7F420DCF6D000C1EB79 /* ImageMaining.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C3F7F320DCF6D000C1EB79 /* ImageMaining.storyboard */; };
 		22C3F7F620DCF6F300C1EB79 /* ImageMainingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3F7F520DCF6F300C1EB79 /* ImageMainingVC.swift */; };
+		22C3F7F820DCFD6C00C1EB79 /* OthersML.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C3F7F720DCFD6C00C1EB79 /* OthersML.storyboard */; };
+		22C3F7FA20DCFD8E00C1EB79 /* TextMaining.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C3F7F920DCFD8E00C1EB79 /* TextMaining.storyboard */; };
+		22C3F7FC20DCFDA900C1EB79 /* TextMainingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3F7FB20DCFDA900C1EB79 /* TextMainingVC.swift */; };
+		22C3F7FE20DCFDC800C1EB79 /* OthersMLVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3F7FD20DCFDC800C1EB79 /* OthersMLVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +76,10 @@
 		22C3F7EE20DBDB5700C1EB79 /* ML.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ML.storyboard; sourceTree = "<group>"; };
 		22C3F7F320DCF6D000C1EB79 /* ImageMaining.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageMaining.storyboard; sourceTree = "<group>"; };
 		22C3F7F520DCF6F300C1EB79 /* ImageMainingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMainingVC.swift; sourceTree = "<group>"; };
+		22C3F7F720DCFD6C00C1EB79 /* OthersML.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OthersML.storyboard; sourceTree = "<group>"; };
+		22C3F7F920DCFD8E00C1EB79 /* TextMaining.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TextMaining.storyboard; sourceTree = "<group>"; };
+		22C3F7FB20DCFDA900C1EB79 /* TextMainingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMainingVC.swift; sourceTree = "<group>"; };
+		22C3F7FD20DCFDC800C1EB79 /* OthersMLVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OthersMLVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +251,8 @@
 		22C3F7F120DCF5EE00C1EB79 /* TextMaining */ = {
 			isa = PBXGroup;
 			children = (
+				22C3F7F920DCFD8E00C1EB79 /* TextMaining.storyboard */,
+				22C3F7FB20DCFDA900C1EB79 /* TextMainingVC.swift */,
 			);
 			path = TextMaining;
 			sourceTree = "<group>";
@@ -250,6 +260,8 @@
 		22C3F7F220DCF60000C1EB79 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				22C3F7F720DCFD6C00C1EB79 /* OthersML.storyboard */,
+				22C3F7FD20DCFDC800C1EB79 /* OthersMLVC.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -335,6 +347,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22C3F7FA20DCFD8E00C1EB79 /* TextMaining.storyboard in Resources */,
+				22C3F7F820DCFD6C00C1EB79 /* OthersML.storyboard in Resources */,
 				22C3F7F420DCF6D000C1EB79 /* ImageMaining.storyboard in Resources */,
 				22C3F7AF20DBA0A500C1EB79 /* LaunchScreen.storyboard in Resources */,
 				22C3F7E920DBD55900C1EB79 /* Main.storyboard in Resources */,
@@ -363,6 +377,7 @@
 				22C3F7E320DBBD2F00C1EB79 /* BarView.swift in Sources */,
 				22C3F7E520DBBD7E00C1EB79 /* MainViewController.swift in Sources */,
 				22C3F7DB20DBBC6E00C1EB79 /* MainNavigationController.swift in Sources */,
+				22C3F7FE20DCFDC800C1EB79 /* OthersMLVC.swift in Sources */,
 				22C3F7CC20DBB94100C1EB79 /* Utils.swift in Sources */,
 				22C3F7EB20DBD7B200C1EB79 /* StartViewController.swift in Sources */,
 				22C3F7DD20DBBCD200C1EB79 /* EmptyBarView.swift in Sources */,
@@ -370,6 +385,7 @@
 				22C3F7D720DBBBF700C1EB79 /* UIApplication+Nav.swift in Sources */,
 				22C3F7CF20DBB99300C1EB79 /* BarsDelegate.swift in Sources */,
 				22C3F7DF20DBBCFB00C1EB79 /* TitleBarView.swift in Sources */,
+				22C3F7FC20DCFDA900C1EB79 /* TextMainingVC.swift in Sources */,
 				22C3F7C920DBB8D500C1EB79 /* Bar.swift in Sources */,
 				22C3F7D920DBBC1500C1EB79 /* UIView+Nib.swift in Sources */,
 				22C3F7A220DBA0A300C1EB79 /* AppDelegate.swift in Sources */,

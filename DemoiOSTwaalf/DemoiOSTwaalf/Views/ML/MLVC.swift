@@ -23,16 +23,29 @@ class MLVC: UIViewController {
     
 
     @IBAction func imageMainingAction(_ sender: UIButton) {
-        if let vcc = UIStoryboard(name: "ImageMaining", bundle: nil).instantiateInitialViewController() {
-            UIApplication.mainNC?.pushViewController(vcc, animated: false)
+        if let vc = UIStoryboard(name: "ImageMaining", bundle: nil).instantiateInitialViewController() {
+            UIApplication.mainNC?.pushViewController(vc, animated: false)
+        }
+    }
+    
+    @IBAction func textMaining(_ sender: UIButton) {
+        if let vc = UIStoryboard(name: "TextMaining", bundle: nil).instantiateInitialViewController() {
+            UIApplication.mainNC?.pushViewController(vc, animated: false)
         }
     }
     
     
-    
+    @IBAction func othersMLAction(_ sender: UIButton) {
+        if let vc = UIStoryboard(name: "OthersML", bundle: nil).instantiateInitialViewController() {
+            UIApplication.mainNC?.pushViewController(vc, animated: false)
+        }
+    }
+
     
 
+    
 }
+
 
 extension MLVC: BarsDelegate {
     func top() -> [AnyBarView] {
