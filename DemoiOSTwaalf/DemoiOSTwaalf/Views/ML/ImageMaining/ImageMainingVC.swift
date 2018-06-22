@@ -1,14 +1,14 @@
 //
-//  MLVC.swift
+//  ImageMainingVC.swift
 //  DemoiOSTwaalf
 //
-//  Created by Grzesiek Kulesza on 21.06.2018.
+//  Created by Grzesiek Kulesza on 22.06.2018.
 //  Copyright © 2018 Grzesiek Kulesza. All rights reserved.
 //
 
 import UIKit
 
-class MLVC: UIViewController {
+class ImageMainingVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,32 +21,29 @@ class MLVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    @IBAction func imageMainingAction(_ sender: UIButton) {
-        if let vcc = UIStoryboard(name: "ImageMaining", bundle: nil).instantiateInitialViewController() {
+    
+    
+    @IBAction func mLAction(_ sender: UIButton) {
+        if let vcc = UIStoryboard(name: "ML", bundle: nil).instantiateInitialViewController() {
             UIApplication.mainNC?.pushViewController(vcc, animated: false)
+            
         }
     }
-    
-    
-    
-    
 
+
+        
 }
 
-extension MLVC: BarsDelegate {
+
+extension ImageMainingVC: BarsDelegate {
     func top() -> [AnyBarView] {
         return [
             Bar<TitleBarView>() {
-                $0.name = "Machine Learning"
-                $0.mainView.backgroundColor = UIColor.dGreen
-                $0.nameLabel.textColor = UIColor.dBlack
+                $0.name = "Image Maining"
+                $0.mainView.backgroundColor = UIColor.dBlack
+                $0.nameLabel.textColor = UIColor.dWhite
             }
         ]
     }
 }
-//extension StartViewController: BarsDelegate {
-//    func top() -> [AnyBarView] {
-//        return []
-//    }
-//}
+        

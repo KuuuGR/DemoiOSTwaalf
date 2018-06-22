@@ -77,6 +77,6 @@
         </view>
     </objects>
     <resources>
-        <image name="ic_back" width="27" height="27"/>
+        <image name="ic_back" width="30" height="30"/>
     </resources>
 </document>

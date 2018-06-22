@@ -28,18 +28,15 @@ class StartViewController: UIViewController {
     
     
     @IBAction func mLAction(_ sender: UIButton) {
-        if let vcc = UIStoryboard(name: "ML", bundle: nil).instantiateInitialViewController() {
-            UIApplication.mainNC?.pushViewController(vcc, animated: false)
-        }
-    }
-    
-    @IBAction func playAction(_ sender: UIButton) {
-        if let vc = UIStoryboard(name: "Levels", bundle: nil).instantiateInitialViewController() {
+        if let vc = UIStoryboard(name: "ML", bundle: nil).instantiateInitialViewController() {
             UIApplication.mainNC?.pushViewController(vc, animated: false)
         }
-
     }
     
+
+
+    }
+
     /*
     // MARK: - Navigation
 
@@ -50,7 +47,7 @@ class StartViewController: UIViewController {
     }
     */
 
-}
+
 
 extension StartViewController: BarsDelegate {
     func top() -> [AnyBarView] {

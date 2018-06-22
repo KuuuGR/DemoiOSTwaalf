@@ -29,6 +29,8 @@
 		22C3F7EB20DBD7B200C1EB79 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3F7EA20DBD7B200C1EB79 /* StartViewController.swift */; };
 		22C3F7ED20DBDB3100C1EB79 /* MLVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3F7EC20DBDB3100C1EB79 /* MLVC.swift */; };
 		22C3F7EF20DBDB5700C1EB79 /* ML.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C3F7EE20DBDB5700C1EB79 /* ML.storyboard */; };
+		22C3F7F420DCF6D000C1EB79 /* ImageMaining.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C3F7F320DCF6D000C1EB79 /* ImageMaining.storyboard */; };
+		22C3F7F620DCF6F300C1EB79 /* ImageMainingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3F7F520DCF6F300C1EB79 /* ImageMainingVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		22C3F7EA20DBD7B200C1EB79 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		22C3F7EC20DBDB3100C1EB79 /* MLVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLVC.swift; sourceTree = "<group>"; };
 		22C3F7EE20DBDB5700C1EB79 /* ML.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ML.storyboard; sourceTree = "<group>"; };
+		22C3F7F320DCF6D000C1EB79 /* ImageMaining.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageMaining.storyboard; sourceTree = "<group>"; };
+		22C3F7F520DCF6F300C1EB79 /* ImageMainingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMainingVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +215,9 @@
 		22C3F7D420DBBB0900C1EB79 /* ML */ = {
 			isa = PBXGroup;
 			children = (
+				22C3F7F020DCF5D200C1EB79 /* ImageMaining */,
+				22C3F7F120DCF5EE00C1EB79 /* TextMaining */,
+				22C3F7F220DCF60000C1EB79 /* Others */,
 				22C3F7EC20DBDB3100C1EB79 /* MLVC.swift */,
 				22C3F7EE20DBDB5700C1EB79 /* ML.storyboard */,
 			);
@@ -222,6 +229,29 @@
 			children = (
 			);
 			path = AR;
+			sourceTree = "<group>";
+		};
+		22C3F7F020DCF5D200C1EB79 /* ImageMaining */ = {
+			isa = PBXGroup;
+			children = (
+				22C3F7F320DCF6D000C1EB79 /* ImageMaining.storyboard */,
+				22C3F7F520DCF6F300C1EB79 /* ImageMainingVC.swift */,
+			);
+			path = ImageMaining;
+			sourceTree = "<group>";
+		};
+		22C3F7F120DCF5EE00C1EB79 /* TextMaining */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TextMaining;
+			sourceTree = "<group>";
+		};
+		22C3F7F220DCF60000C1EB79 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Others;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +335,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22C3F7F420DCF6D000C1EB79 /* ImageMaining.storyboard in Resources */,
 				22C3F7AF20DBA0A500C1EB79 /* LaunchScreen.storyboard in Resources */,
 				22C3F7E920DBD55900C1EB79 /* Main.storyboard in Resources */,
 				22C3F7AC20DBA0A500C1EB79 /* Assets.xcassets in Resources */,
@@ -342,6 +373,7 @@
 				22C3F7C920DBB8D500C1EB79 /* Bar.swift in Sources */,
 				22C3F7D920DBBC1500C1EB79 /* UIView+Nib.swift in Sources */,
 				22C3F7A220DBA0A300C1EB79 /* AppDelegate.swift in Sources */,
+				22C3F7F620DCF6F300C1EB79 /* ImageMainingVC.swift in Sources */,
 				22C3F7AA20DBA0A300C1EB79 /* DemoiOSTwaalf.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
