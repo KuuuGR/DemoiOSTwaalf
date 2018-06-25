@@ -11,9 +11,11 @@ import UIKit
 class TextMainingVC: UIViewController {
 
     @IBOutlet weak var userTextEnterField: UITextView!
+    @IBOutlet weak var userNameField: UITextField!
     
     @IBAction func analyzeAction(_ sender: UIButton) {
         userTextEnterField.text = "clikłeś"
+        
     }
     
     override func viewDidLoad() {
