@@ -22,7 +22,7 @@ class RoundButton: ShadedButton {
         layer.borderWidth = 2
         layer.borderColor = UIColor.dWhite.cgColor
         
-        titleLabel?.font =  UIFont(name: "Roboto-Medium", size: 21.0) ?? UIFont.systemFont(ofSize: 5.0)
+        titleLabel?.font =  UIFont(name: "Roboto-Medium", size: 21.0) ?? UIFont.systemFont(ofSize: 22.0)
         // self.titleLabel?.font =  UIFont(name: "Papyrus", size: 21.0) ?? UIFont.systemFont(ofSize: 2.0)
         
     }

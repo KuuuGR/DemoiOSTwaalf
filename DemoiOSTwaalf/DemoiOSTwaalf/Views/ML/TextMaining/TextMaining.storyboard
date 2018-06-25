@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,26 +19,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text ML" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9Z-uh-ZNb">
-                                <rect key="frame" x="138" y="323" width="61" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text block analyzing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtB-Is-ClZ">
+                                <rect key="frame" x="93" y="28" width="188" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EPZ-3y-tNx">
+                                <rect key="frame" x="8" y="63" width="359" height="187"/>
+                                <color key="backgroundColor" red="0.74117647060000003" green="1" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" selected="YES"/>
+                                </accessibility>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyH-8j-XqS" customClass="RoundButton" customModule="DemoiOSTwaalf" customModuleProvider="target">
+                                <rect key="frame" x="284" y="266" width="75" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.99056508045576674" blue="0.78243127496350173" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="QBQ-ei-Ycc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="analyze">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="analyzeAction:" destination="mc4-rB-qf6" eventType="touchUpInside" id="YIC-RR-Q9A"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="1Gz-Lx-PH3" firstAttribute="bottom" secondItem="y9Z-uh-ZNb" secondAttribute="bottom" constant="323" id="32T-QZ-NWo"/>
-                            <constraint firstItem="1Gz-Lx-PH3" firstAttribute="trailing" secondItem="y9Z-uh-ZNb" secondAttribute="trailing" constant="176" id="gHN-Bk-hZl"/>
-                            <constraint firstItem="y9Z-uh-ZNb" firstAttribute="leading" secondItem="1Gz-Lx-PH3" secondAttribute="leading" constant="138" id="xx2-Ub-k5Q"/>
-                            <constraint firstItem="y9Z-uh-ZNb" firstAttribute="top" secondItem="1Gz-Lx-PH3" secondAttribute="top" constant="303" id="yxy-9n-eVH"/>
+                            <constraint firstItem="dtB-Is-ClZ" firstAttribute="centerX" secondItem="1Gz-Lx-PH3" secondAttribute="centerX" id="CTA-Px-jY9"/>
+                            <constraint firstItem="EPZ-3y-tNx" firstAttribute="leading" secondItem="1Gz-Lx-PH3" secondAttribute="leading" constant="8" id="E2g-zQ-Vs5"/>
+                            <constraint firstItem="EPZ-3y-tNx" firstAttribute="height" secondItem="UVd-cl-e7s" secondAttribute="height" multiplier="0.28" id="Gis-X3-eDt"/>
+                            <constraint firstItem="1Gz-Lx-PH3" firstAttribute="trailing" secondItem="EPZ-3y-tNx" secondAttribute="trailing" constant="8" id="P9J-Uy-ZcL"/>
+                            <constraint firstItem="1Gz-Lx-PH3" firstAttribute="trailing" secondItem="dyH-8j-XqS" secondAttribute="trailing" constant="16" id="XNa-am-2EB"/>
+                            <constraint firstItem="EPZ-3y-tNx" firstAttribute="top" secondItem="dtB-Is-ClZ" secondAttribute="bottom" constant="8" id="dCj-qx-RW2"/>
+                            <constraint firstItem="dyH-8j-XqS" firstAttribute="top" secondItem="EPZ-3y-tNx" secondAttribute="bottom" constant="16" id="jEv-I6-k3p"/>
+                            <constraint firstItem="dyH-8j-XqS" firstAttribute="width" secondItem="UVd-cl-e7s" secondAttribute="width" multiplier="0.2" id="ti8-AQ-VqN"/>
+                            <constraint firstItem="dtB-Is-ClZ" firstAttribute="top" secondItem="1Gz-Lx-PH3" secondAttribute="top" constant="8" id="zjh-uq-BlE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1Gz-Lx-PH3"/>
                     </view>
+                    <connections>
+                        <outlet property="userTextEnterField" destination="EPZ-3y-tNx" id="93z-ab-5MX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LSC-bK-wiQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="74" y="122"/>
+            <point key="canvasLocation" x="72.799999999999997" y="121.88905547226388"/>
         </scene>
     </scenes>
 </document>

@@ -10,12 +10,26 @@ import UIKit
 
 class TextMainingVC: UIViewController {
 
+    @IBOutlet weak var userTextEnterField: UITextView!
+    
+    @IBAction func analyzeAction(_ sender: UIButton) {
+        userTextEnterField.text = "clikłeś"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        userTextEnterField.becomeFirstResponder()
+        userTextEnterField.selectedTextRange = userTextEnterField.textRange(from: userTextEnterField.beginningOfDocument, to: userTextEnterField.endOfDocument)
+        
+        
+        
+        
+        
     }
-
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -32,7 +32,7 @@ extension FutureVC: BarsDelegate {
     func top() -> [AnyBarView] {
         return [
             Bar<TitleBarView>() {
-                $0.name = "it's will coming soon"
+                $0.name = "It's should coming soon.. probably"
                 $0.mainView.backgroundColor = UIColor.dGreen
                 $0.nameLabel.textColor = UIColor.dBlack
             }
