@@ -10,25 +10,52 @@ import UIKit
 
 class ImageMainingVC: UIViewController {
 
+    
+  
+    @IBOutlet weak var imgImage: UIImageView!
+    @IBOutlet weak var categoryLabel: UILabel!
+    
+    let model = GoogLeNetPlaces()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
+
+        
+        
+        
     }
 
+    
+    @IBAction func loadImageTapped(_ sender: UIButton) {
+        
+        if let sceneLabelString = sceneLabel(forImage: imgImage.image!) {
+            categoryLabel.text = sceneLabelString
+        }
+    }
+    
+    
+    func sceneLabel (forImage image:UIImage) -> String? {
+        if let pixelBuffer = ImageProcessor.pixelBuffer(forImage: image.cgImage!) {
+            guard let scene = try? model.prediction(sceneImage: pixelBuffer) else {fatalError("Unexpected runtime error")}
+            return scene.sceneLabel
+            
+        }
+        
+        return nil
+    }
+    
+    
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     
-    
-    @IBAction func mLAction(_ sender: UIButton) {
-        if let vcc = UIStoryboard(name: "ML", bundle: nil).instantiateInitialViewController() {
-            UIApplication.mainNC?.pushViewController(vcc, animated: false)
-            
-        }
-    }
 
 
         

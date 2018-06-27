@@ -43,6 +43,8 @@
 		22C3F80B20DD1A9400C1EB79 /* ARVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3F80A20DD1A9400C1EB79 /* ARVC.swift */; };
 		22C3F80E20DD1D0600C1EB79 /* Future.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C3F80D20DD1D0600C1EB79 /* Future.storyboard */; };
 		22C3F81020DD1D2200C1EB79 /* FutureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3F80F20DD1D2200C1EB79 /* FutureVC.swift */; };
+		22C3F81B20E3942B00C1EB79 /* GoogLeNetPlaces.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 22C3F81A20E3942B00C1EB79 /* GoogLeNetPlaces.mlmodel */; };
+		22C3F81D20E3A2A400C1EB79 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3F81C20E3A2A400C1EB79 /* ImageProcessor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +98,8 @@
 		22C3F80A20DD1A9400C1EB79 /* ARVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARVC.swift; sourceTree = "<group>"; };
 		22C3F80D20DD1D0600C1EB79 /* Future.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Future.storyboard; sourceTree = "<group>"; };
 		22C3F80F20DD1D2200C1EB79 /* FutureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureVC.swift; sourceTree = "<group>"; };
+		22C3F81A20E3942B00C1EB79 /* GoogLeNetPlaces.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GoogLeNetPlaces.mlmodel; sourceTree = "<group>"; };
+		22C3F81C20E3A2A400C1EB79 /* ImageProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +272,7 @@
 			children = (
 				22C3F7F320DCF6D000C1EB79 /* ImageMaining.storyboard */,
 				22C3F7F520DCF6F300C1EB79 /* ImageMainingVC.swift */,
+				22C3F81C20E3A2A400C1EB79 /* ImageProcessor.swift */,
 			);
 			path = ImageMaining;
 			sourceTree = "<group>";
@@ -293,6 +298,7 @@
 		22C3F80720DD15D500C1EB79 /* ML */ = {
 			isa = PBXGroup;
 			children = (
+				22C3F81A20E3942B00C1EB79 /* GoogLeNetPlaces.mlmodel */,
 			);
 			path = ML;
 			sourceTree = "<group>";
@@ -419,6 +425,7 @@
 				22C3F7E320DBBD2F00C1EB79 /* BarView.swift in Sources */,
 				22C3F7E520DBBD7E00C1EB79 /* MainViewController.swift in Sources */,
 				22C3F80B20DD1A9400C1EB79 /* ARVC.swift in Sources */,
+				22C3F81D20E3A2A400C1EB79 /* ImageProcessor.swift in Sources */,
 				22C3F7DB20DBBC6E00C1EB79 /* MainNavigationController.swift in Sources */,
 				22C3F7FE20DCFDC800C1EB79 /* OthersMLVC.swift in Sources */,
 				22C3F7CC20DBB94100C1EB79 /* Utils.swift in Sources */,
@@ -431,6 +438,7 @@
 				22C3F7CF20DBB99300C1EB79 /* BarsDelegate.swift in Sources */,
 				22C3F7DF20DBBCFB00C1EB79 /* TitleBarView.swift in Sources */,
 				22C3F7FC20DCFDA900C1EB79 /* TextMainingVC.swift in Sources */,
+				22C3F81B20E3942B00C1EB79 /* GoogLeNetPlaces.mlmodel in Sources */,
 				22C3F7C920DBB8D500C1EB79 /* Bar.swift in Sources */,
 				22C3F80620DD0FD600C1EB79 /* RoundButton.swift in Sources */,
 				22C3F7D920DBBC1500C1EB79 /* UIView+Nib.swift in Sources */,
