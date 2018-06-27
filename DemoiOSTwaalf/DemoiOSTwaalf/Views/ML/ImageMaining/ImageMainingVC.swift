@@ -8,32 +8,54 @@
 
 import UIKit
 
-class ImageMainingVC: UIViewController {
+class ImageMainingVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     
   
-    @IBOutlet weak var imgImage: UIImageView!
+    @IBOutlet weak var imageToAnalize: UIImageView!
     @IBOutlet weak var categoryLabel: UILabel!
     
     let model = GoogLeNetPlaces()
+    let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        imagePicker.delegate = self
         // Do any additional setup after loading the view.
-        
-
-        
         
         
     }
 
     
-    @IBAction func loadImageTapped(_ sender: UIButton) {
-        
-        if let sceneLabelString = sceneLabel(forImage: imgImage.image!) {
+    @IBAction func processingImageTapped(_ sender: UIButton) {
+        if let sceneLabelString = sceneLabel(forImage: imageToAnalize.image!) {
             categoryLabel.text = sceneLabelString
         }
     }
+    
+    @IBAction func loadImageTapped(_ sender: UIButton) {
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .photoLibrary
+    
+        present(imagePicker, animated: true, completion: nil)
+        
+        
+    }
+    
+   
+// MARK: - UIImagePickerControllerDelegate Methods
+    
+    private func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            imageToAnalize.contentMode = .scaleAspectFit
+            imageToAnalize.image = pickedImage
+        }
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
     
     
     func sceneLabel (forImage image:UIImage) -> String? {
@@ -46,7 +68,7 @@ class ImageMainingVC: UIViewController {
         return nil
     }
     
-    
+
     
     
     

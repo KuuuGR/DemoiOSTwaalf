@@ -26,33 +26,36 @@
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="according to GoogLeNetPlaces.mlmodel, an image scenery shows: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qi-BD-2K0" userLabel="sentence1Label">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="according to GoogLeNetPlaces.mlmodel, an image scenery shows: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qi-BD-2K0" userLabel="SentenceLabel">
                                 <rect key="frame" x="8" y="28" width="359" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="some scenery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bm3-66-4Fh" userLabel="categoryLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="some scenery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bm3-66-4Fh" userLabel="CategoryLabel">
                                 <rect key="frame" x="130" y="77" width="115" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.28721388920000002" blue="0.44759270639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Djw-v3-sQP">
-                                <rect key="frame" x="38.5" y="386" width="300" height="133.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Djw-v3-sQP" userLabel="ButtonView">
+                                <rect key="frame" x="37.5" y="386" width="300" height="133.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjB-Vp-I9R">
-                                        <rect key="frame" x="167" y="0.0" width="133.5" height="133.5"/>
-                                        <state key="normal" title="Button" image="processing01"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kpu-Cl-Q83">
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kpu-Cl-Q83" userLabel="LoadImageButton">
                                         <rect key="frame" x="0.5" y="0.0" width="133.5" height="133.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Kpu-Cl-Q83" secondAttribute="height" multiplier="1:1" id="4xn-t5-wwO"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="Load_image"/>
                                         <connections>
-                                            <action selector="loadImageTapped:" destination="viD-Mc-qPo" eventType="touchUpInside" id="RKx-5H-NID"/>
+                                            <action selector="loadImageTapped:" destination="viD-Mc-qPo" eventType="touchUpInside" id="Dzd-7Z-J3P"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjB-Vp-I9R" userLabel="ProcessingImageButton">
+                                        <rect key="frame" x="167" y="0.0" width="133.5" height="133.5"/>
+                                        <state key="normal" title="Button" image="processing01"/>
+                                        <connections>
+                                            <action selector="processingImageTapped:" destination="viD-Mc-qPo" eventType="touchUpInside" id="aPu-AZ-6lJ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -86,7 +89,7 @@
                     </view>
                     <connections>
                         <outlet property="categoryLabel" destination="bm3-66-4Fh" id="Msf-Ez-IGU"/>
-                        <outlet property="imgImage" destination="W5u-zb-hz0" id="jPe-R8-BPb"/>
+                        <outlet property="imageToAnalize" destination="W5u-zb-hz0" id="jPe-R8-BPb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btZ-58-hQ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
