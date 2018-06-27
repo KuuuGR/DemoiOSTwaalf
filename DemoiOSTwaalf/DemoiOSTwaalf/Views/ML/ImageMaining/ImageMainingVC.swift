@@ -37,10 +37,9 @@ class ImageMainingVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func loadImageTapped(_ sender: UIButton) {
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .photoLibrary
-    
+        
         present(imagePicker, animated: true, completion: nil)
-        
-        
+    
     }
     
    
@@ -55,6 +54,11 @@ class ImageMainingVC: UIViewController, UIImagePickerControllerDelegate, UINavig
         dismiss(animated: true, completion: nil)
     }
     
+   
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     
     
     
@@ -62,14 +66,11 @@ class ImageMainingVC: UIViewController, UIImagePickerControllerDelegate, UINavig
         if let pixelBuffer = ImageProcessor.pixelBuffer(forImage: image.cgImage!) {
             guard let scene = try? model.prediction(sceneImage: pixelBuffer) else {fatalError("Unexpected runtime error")}
             return scene.sceneLabel
-            
         }
-        
         return nil
     }
     
 
-    
     
     
     override func didReceiveMemoryWarning() {
@@ -78,7 +79,6 @@ class ImageMainingVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     
-
 
         
 }
