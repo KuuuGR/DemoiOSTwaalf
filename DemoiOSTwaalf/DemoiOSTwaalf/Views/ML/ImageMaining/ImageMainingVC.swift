@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ImageMainingVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     
@@ -18,15 +19,21 @@ class ImageMainingVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     let model = GoogLeNetPlaces()
     let imagePicker = UIImagePickerController()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         imagePicker.delegate = self
         // Do any additional setup after loading the view.
-        
-        
+    }
+    
+   
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 
+    
+    
     
     @IBAction func processingImageTapped(_ sender: UIButton) {
         if let sceneLabelString = sceneLabel(forImage: imageToAnalize.image!) {
@@ -71,12 +78,6 @@ class ImageMainingVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
 
-    
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     
 
