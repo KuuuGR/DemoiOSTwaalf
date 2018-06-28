@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import CoreML
+import Vision
 
 
 class ImageMainingVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     
-  
     @IBOutlet weak var imageToAnalize: UIImageView!
     @IBOutlet weak var categoryLabel: UILabel!
     
@@ -47,12 +48,71 @@ class ImageMainingVC: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagePicker.delegate = self
         
         present(imagePicker, animated: true, completion: nil)
-    
+        //imageToAnalize.contentMode = .scaleAspectFit
     }
     
-   
-// MARK: - UIImagePickerControllerDelegate Methods
     
+
+    @IBAction func someButtonTapped(_ sender: UIButton) {
+        getImage(image: imageToAnalize.image!)
+        //print (tag)
+    }
+    
+    
+    
+   
+
+    
+    //get the image by name
+    
+    func getImage(image : UIImage){
+        categoryLabel.text = "Please wait.."
+        //set up the model
+        guard let model = try? VNCoreMLModel(for: GoogLeNetPlaces().model) else{
+            return
+        }
+        //create a vision request
+        let request = VNCoreMLRequest(model: model) { (request, error) in
+            guard let results = request.results as? [VNClassificationObservation] else{
+                return
+            }
+            //examine convidence level
+            for result in results{
+                print("\(result.identifier) and confidence level \(result.confidence * 100)")
+            }
+            let firstResult = results.first
+            print("here i am")
+            //update text lable when async thread is complete
+            DispatchQueue.main.async {
+                self.categoryLabel.text =  firstResult?.identifier
+            }
+            
+        }
+        guard let ciImage = CIImage(image: image) else {
+            return
+        }
+        
+        //run the google google model here
+        
+        let handler = VNImageRequestHandler(ciImage: ciImage, options: [ : ])
+        
+        //create a bg thread
+        DispatchQueue.global().async {
+            do{
+                try handler.perform([request])
+                
+            }catch{
+                print(error)
+            }
+        }
+    }
+        
+    
+    
+    
+    
+    
+    // MARK: - UIImagePickerControllerDelegate Methods
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageToAnalize.contentMode = .scaleAspectFit
@@ -80,9 +140,10 @@ class ImageMainingVC: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     
     
-
         
 }
+
+
 
 
 extension ImageMainingVC: BarsDelegate {
