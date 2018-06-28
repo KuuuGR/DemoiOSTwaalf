@@ -16,6 +16,8 @@ class ImageMainingVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet weak var imageToAnalize: UIImageView!
     @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var confidenceLabel: UILabel!
+    
     
     let model = GoogLeNetPlaces()
     let imagePicker = UIImagePickerController()
@@ -35,10 +37,9 @@ class ImageMainingVC: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     
     
-    
     @IBAction func processingImageTapped(_ sender: UIButton) {
-        if let sceneLabelString = sceneLabel(forImage: imageToAnalize.image!) {
-            categoryLabel.text = sceneLabelString
+        if imageToAnalize.image != nil {
+            getImage(image: imageToAnalize.image!)
         }
     }
     
@@ -46,23 +47,11 @@ class ImageMainingVC: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .photoLibrary
         imagePicker.delegate = self
-        
         present(imagePicker, animated: true, completion: nil)
         //imageToAnalize.contentMode = .scaleAspectFit
     }
     
-    
 
-    @IBAction func someButtonTapped(_ sender: UIButton) {
-        getImage(image: imageToAnalize.image!)
-        //print (tag)
-    }
-    
-    
-    
-   
-
-    
     //get the image by name
     
     func getImage(image : UIImage){
@@ -85,6 +74,12 @@ class ImageMainingVC: UIViewController, UIImagePickerControllerDelegate, UINavig
             //update text lable when async thread is complete
             DispatchQueue.main.async {
                 self.categoryLabel.text =  firstResult?.identifier
+                
+                let confidenceValue = (firstResult?.confidence)!*100
+                var confLabelText = String("confidence level equals ")
+                confLabelText.append(String(format: "%.1f", confidenceValue))
+                confLabelText.append(" %")
+                self.confidenceLabel.text = confLabelText
             }
             
         }
@@ -110,13 +105,11 @@ class ImageMainingVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     
-    
-    
     // MARK: - UIImagePickerControllerDelegate Methods
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            imageToAnalize.contentMode = .scaleAspectFit
             imageToAnalize.image = pickedImage
+            imageToAnalize.contentMode = .scaleAspectFit
         }
         
         dismiss(animated: true, completion: nil)
@@ -127,22 +120,8 @@ class ImageMainingVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     
-    
-    
-    func sceneLabel (forImage image:UIImage) -> String? {
-        if let pixelBuffer = ImageProcessor.pixelBuffer(forImage: image.cgImage!) {
-            guard let scene = try? model.prediction(sceneImage: pixelBuffer) else {fatalError("Unexpected runtime error")}
-            return scene.sceneLabel
-        }
-        return nil
-    }
-    
-
-    
-    
         
 }
-
 
 
 

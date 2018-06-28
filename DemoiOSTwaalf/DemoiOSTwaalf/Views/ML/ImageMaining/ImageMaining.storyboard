@@ -70,18 +70,12 @@
                                     <constraint firstItem="Kpu-Cl-Q83" firstAttribute="height" secondItem="Djw-v3-sQP" secondAttribute="height" id="zMA-IE-RPW"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bD-P4-Hsh" customClass="RoundButton" customModule="DemoiOSTwaalf" customModuleProvider="target">
-                                <rect key="frame" x="162" y="549.5" width="50" height="50"/>
-                                <color key="backgroundColor" red="0.55795010077417806" green="1" blue="0.5547277580081087" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="Hi7-bu-R7m"/>
-                                    <constraint firstAttribute="height" constant="50" id="S3Y-Ne-3bX"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="someButtonTapped:" destination="viD-Mc-qPo" eventType="touchUpInside" id="XqJ-Or-ae7"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfx-Xj-UH3" userLabel="ConfidenceLabel">
+                                <rect key="frame" x="174.5" y="106" width="26" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -89,13 +83,13 @@
                             <constraint firstItem="W5u-zb-hz0" firstAttribute="centerX" secondItem="bm3-66-4Fh" secondAttribute="centerX" id="6Fa-7V-lXV"/>
                             <constraint firstItem="W5u-zb-hz0" firstAttribute="top" secondItem="bm3-66-4Fh" secondAttribute="bottom" constant="48" id="7vx-GM-hkN"/>
                             <constraint firstItem="bm3-66-4Fh" firstAttribute="top" secondItem="6qi-BD-2K0" secondAttribute="bottom" constant="8" id="FQ2-W1-v1T"/>
-                            <constraint firstItem="0bD-P4-Hsh" firstAttribute="top" secondItem="Djw-v3-sQP" secondAttribute="bottom" constant="30" id="LRw-a3-WFi"/>
                             <constraint firstItem="bm3-66-4Fh" firstAttribute="centerX" secondItem="MD3-pa-kdC" secondAttribute="centerX" id="Nbe-TP-gwS"/>
                             <constraint firstItem="Djw-v3-sQP" firstAttribute="width" secondItem="eMP-IJ-4H8" secondAttribute="width" multiplier="0.8" priority="800" id="NpC-C4-My3"/>
                             <constraint firstItem="6qi-BD-2K0" firstAttribute="top" secondItem="MD3-pa-kdC" secondAttribute="top" constant="8" id="VCO-oY-G12"/>
-                            <constraint firstItem="0bD-P4-Hsh" firstAttribute="centerX" secondItem="Djw-v3-sQP" secondAttribute="centerX" id="eBx-AW-gBy"/>
                             <constraint firstItem="Djw-v3-sQP" firstAttribute="centerX" secondItem="W5u-zb-hz0" secondAttribute="centerX" id="hhG-co-Qvs"/>
+                            <constraint firstItem="Zfx-Xj-UH3" firstAttribute="centerX" secondItem="bm3-66-4Fh" secondAttribute="centerX" id="lEG-oq-oEt"/>
                             <constraint firstItem="Djw-v3-sQP" firstAttribute="height" secondItem="eMP-IJ-4H8" secondAttribute="height" multiplier="0.2" id="mcB-BL-HCR"/>
+                            <constraint firstItem="Zfx-Xj-UH3" firstAttribute="top" secondItem="bm3-66-4Fh" secondAttribute="bottom" constant="8" id="nec-yB-tyv"/>
                             <constraint firstItem="6qi-BD-2K0" firstAttribute="leading" secondItem="MD3-pa-kdC" secondAttribute="leading" constant="8" id="svJ-r2-Es4"/>
                             <constraint firstItem="Djw-v3-sQP" firstAttribute="top" secondItem="W5u-zb-hz0" secondAttribute="bottom" constant="16" id="xPM-ye-pj2"/>
                         </constraints>
@@ -103,6 +97,7 @@
                     </view>
                     <connections>
                         <outlet property="categoryLabel" destination="bm3-66-4Fh" id="Msf-Ez-IGU"/>
+                        <outlet property="confidenceLabel" destination="Zfx-Xj-UH3" id="LIw-IA-Ubx"/>
                         <outlet property="imageToAnalize" destination="W5u-zb-hz0" id="jPe-R8-BPb"/>
                     </connections>
                 </viewController>
