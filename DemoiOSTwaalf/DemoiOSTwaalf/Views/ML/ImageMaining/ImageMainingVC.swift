@@ -37,6 +37,7 @@ class ImageMainingVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func loadImageTapped(_ sender: UIButton) {
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .photoLibrary
+        imagePicker.delegate = self
         
         present(imagePicker, animated: true, completion: nil)
     
@@ -45,7 +46,7 @@ class ImageMainingVC: UIViewController, UIImagePickerControllerDelegate, UINavig
    
 // MARK: - UIImagePickerControllerDelegate Methods
     
-    private func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageToAnalize.contentMode = .scaleAspectFit
             imageToAnalize.image = pickedImage
@@ -54,7 +55,6 @@ class ImageMainingVC: UIViewController, UIImagePickerControllerDelegate, UINavig
         dismiss(animated: true, completion: nil)
     }
     
-   
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
