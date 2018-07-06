@@ -66,9 +66,11 @@ class ImageMainingVC: UIViewController, UIImagePickerControllerDelegate, UINavig
                 return
             }
             //examine convidence level
+            
             for result in results{
                 print("\(result.identifier) and confidence level \(result.confidence * 100)")
             }
+            
             let firstResult = results.first
             print("here i am")
             //update text lable when async thread is complete
